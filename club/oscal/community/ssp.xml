@@ -14,12 +14,36 @@
                 <p>This role is for community members who author example OSCAL content like this.</p>
             </description>
         </role>
+        <role id="service-provider">
+            <title>Service Provider</title>
+            <description>
+                <p>This role is for vendors who provide on-premises or cloud data center services for their own professional services staff or customer staff to deploy hardware, software, or managed services as part of customer infrastructure.</p>
+                <p>As tis example is about a simple Windows web server with problems, one such company is a cloud service provider like AWS. They provide cloud infrastructure services for the Windows web server to run.</p>
+            </description>
+        </role>
+        <role id="software-vendor">
+            <title>Software Vendor</title>
+            <description>
+                <p>This role is for software vendors who provide libraries or cohesive software developers use to compose one or more services in an information system.</p>
+                <p>As this example is about a simple Windows web server with problems, a software vendor is a company like Microsoft that makes a web server like IIS.</p>
+            </description>
+        </role>
         <party uuid="c8780e68-a98d-4f62-a37f-6bf631ac9b5e" type="organization">
             <short-name>OSCAL Club</short-name>
             <link href="https://github.com/oscal-club"/>
         </party>
+        <party uuid="29cf4463-7fef-47ff-9f7e-8038305ab12f" type="organization">
+            <name>Microsoft</name>
+            <short-name>MSFT</short-name>
+            <link href="https://microsoft.com"></link>
+        </party>
+        <party uuid="2fc90e77-26a8-4da5-96b4-d6d2b04b9596" type="organization">
+            <name>Amazon Web Services</name>
+            <short-name>AWS</short-name>
+            <link href="https://aws.amazon.com"/>
+        </party>
     </metadata>
-    <import-profile href="https://example.com/catalog.xml"/>
+    <import-profile href="https://raw.githubusercontent.com/usnistgov/oscal-content/main/nist.gov/SP800-53/rev5/xml/NIST_SP-800-53_rev5_LOW-baseline-resolved-profile_catalog.xml"/>
     <system-characteristics>
         <system-id>simple-windows-web-server-problems-system</system-id>
         <system-name>Problematic Windows Web Server System</system-name>
@@ -29,7 +53,31 @@
             <p>This is ok and acceptable, at least for our purposes.</p>
         </description>
         <security-sensitivity-level>fips-199-low</security-sensitivity-level>
-        <system-information/>
+        <system-information>
+            <information-type uuid="29bfe615-753d-41da-9631-7571243197d1">
+                <title>Web Server Information Types</title>
+                <description>
+                    <p>The web application hosted by this information system contains the following information types.</p>
+                    <ul>
+                        <li>public relations information</li>
+                        <li>system development information</li>
+                    </ul>
+                </description>
+                <categorization system="https://doi.org/10.6028/NIST.SP.800-60v2r1">
+                    <information-type-id>C.2.6.4</information-type-id>
+                    <information-type-id>C.3.5.1</information-type-id>
+                </categorization>
+                <confidentiality-impact>
+                    <base>fips-199-low</base>
+                </confidentiality-impact>
+                <integrity-impact>
+                    <base>fips-199-low</base>
+                </integrity-impact>
+                <availability-impact>
+                    <base>fips-199-low</base>
+                </availability-impact>
+            </information-type>
+        </system-information>
         <security-impact-level>
             <security-objective-confidentiality>fips-199-low</security-objective-confidentiality>
             <security-objective-integrity>fips-199-low</security-objective-integrity>
@@ -56,8 +104,63 @@
     <system-implementation>
         <user uuid="6e911e5e-d4f5-4b7d-ac7d-9c8b9b908c32">
         </user>
-        <component uuid="dddf4724-a2f6-4d44-a632-45435300dbd2" type="web-server"></component>
-        <component uuid="e33d04cb-a447-4c7f-82b3-48edc3ba0385" type="operating-system"></component>
-        <component uuid="480cfb21-ea4e-486b-859e-2164dc237705" type="virtual-server"></component>
+        <component uuid="dddf4724-a2f6-4d44-a632-45435300dbd2" type="web-server">
+            <title>Internet Information Services</title>
+            <description>
+                <p>Internet Information Services (IIS) for Windows® Server is a flexible, secure and manageable Web server for hosting anything on the Web. From media streaming to web applications, IIS's scalable and open architecture is ready to handle the most demanding tasks.</p>
+            </description>
+            <status state="operational"/>
+            <responsible-role role-id="software-vendor">
+                <party-uuid>29cf4463-7fef-47ff-9f7e-8038305ab12f</party-uuid>
+            </responsible-role>
+            <protocol name="http">
+                <port-range start="80" end="80"/>
+            </protocol>
+            <protocol name="https">
+                <port-range start="443" end="443"/>
+            </protocol>
+        </component>
+        <component uuid="e33d04cb-a447-4c7f-82b3-48edc3ba0385" type="operating-system">
+            <title>Windows Server 2019</title>
+            <description>
+                <p>Windows Server is the platform for building an infrastructure of connected applications, networks, and web services.</p>
+            </description>
+            <status state="operational"/>
+            <responsible-role role-id="software-vendor">
+                <party-uuid>29cf4463-7fef-47ff-9f7e-8038305ab12f</party-uuid>
+            </responsible-role>
+        </component>
+        <component uuid="7ecf5374-77dc-4645-b8dc-e396082b43cb" type="service">
+            <title>Amazon Web Services (AWS) Elastic Compute Cloud (EC2)</title>
+            <description>
+                <p>The EC2 service allows customers to run bare metal servers or virtual machines for their compute workloads.</p>
+                <p>For this example, it is a suitable service to run a virtual machine, like a server running the Windows operating system with the IIS web server installed.</p>
+            </description>
+            <status state="operational"/>
+            <responsible-role role-id="service-provider">
+                <party-uuid>2fc90e77-26a8-4da5-96b4-d6d2b04b9596</party-uuid>
+            </responsible-role>
+            <protocol name="https">
+                <port-range start="443" end="443"/>
+            </protocol>
+        </component>
+        <inventory-item uuid="1bbb51c8-3289-4811-bda5-99fcbadc54e5">
+            <description>
+                <p>An instance of the Windows web server with problems.</p>
+            </description>
+        </inventory-item>
     </system-implementation>
-</system-security-plan
+    <control-implementation>
+        <description>
+            <p>NIST SP 800-53 security controls implemented by the problem web server.</p>
+        </description>
+        <implemented-requirement uuid="b0120bf2-905b-4ca7-a616-bf8f4f185740" control-id="ac-3">
+            <by-component component-uuid="dddf4724-a2f6-4d44-a632-45435300dbd2" uuid="29beda83-ba47-4dc6-be93-eecd7fcd6e9e">
+                <description>
+                    <p>The IIS web server and support component dependencies enforce approved authorizations for logical access to information and system resources in accordance with applicable access control policies. </p>
+                </description>
+                <implementation-status state="under-development"/>
+            </by-component>
+        </implemented-requirement>
+    </control-implementation>
+</system-security-plan>
