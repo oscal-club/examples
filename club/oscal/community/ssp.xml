@@ -113,12 +113,6 @@
             <responsible-role role-id="software-vendor">
                 <party-uuid>29cf4463-7fef-47ff-9f7e-8038305ab12f</party-uuid>
             </responsible-role>
-            <protocol name="http">
-                <port-range start="80" end="80"/>
-            </protocol>
-            <protocol name="https">
-                <port-range start="443" end="443"/>
-            </protocol>
         </component>
         <component uuid="e33d04cb-a447-4c7f-82b3-48edc3ba0385" type="operating-system">
             <title>Windows Server 2019</title>
@@ -140,9 +134,6 @@
             <responsible-role role-id="service-provider">
                 <party-uuid>2fc90e77-26a8-4da5-96b4-d6d2b04b9596</party-uuid>
             </responsible-role>
-            <protocol name="https">
-                <port-range start="443" end="443"/>
-            </protocol>
         </component>
         <inventory-item uuid="1bbb51c8-3289-4811-bda5-99fcbadc54e5">
             <description>
