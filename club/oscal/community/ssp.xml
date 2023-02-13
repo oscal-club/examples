@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system-security-plan uuid="54829f37-bedb-4f88-a81d-82dd7263dbe1"
+    xmlns="http://csrc.nist.gov/ns/oscal/1.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://csrc.nist.gov/ns/oscal/1.0 https://raw.githubusercontent.com/usnistgov/OSCAL/v1.0.4/xml/schema/oscal_complete_schema.xsd">
+    <metadata>
+        <title>Simple Windows Web Server with Problems</title>
+        <last-modified>2023-02-12T00:00:00Z</last-modified>
+        <version>0.0.1-alpha</version>
+        <oscal-version>1.0.4</oscal-version>
+        <role id="author">
+            <title>Content Author</title>
+            <description>
+                <p>This role is for community members who author example OSCAL content like this.</p>
+            </description>
+        </role>
+        <party uuid="c8780e68-a98d-4f62-a37f-6bf631ac9b5e" type="organization">
+            <short-name>OSCAL Club</short-name>
+            <link href="https://github.com/oscal-club"/>
+        </party>
+    </metadata>
+    <import-profile href="https://example.com/catalog.xml"/>
+    <system-characteristics>
+        <system-id>simple-windows-web-server-problems-system</system-id>
+        <system-name>Problematic Windows Web Server System</system-name>
+        <system-name-short>Problem Sever</system-name-short>
+        <description>
+            <p>This example system has a server with problems.</p>
+            <p>This is ok and acceptable, at least for our purposes.</p>
+        </description>
+        <security-sensitivity-level>fips-199-low</security-sensitivity-level>
+        <system-information/>
+        <security-impact-level>
+            <security-objective-confidentiality>fips-199-low</security-objective-confidentiality>
+            <security-objective-integrity>fips-199-low</security-objective-integrity>
+            <security-objective-availability>fips-199-low</security-objective-availability>
+        </security-impact-level>
+        <status state="under-development"/>
+        <authorization-boundary>
+            <description>
+                <p>This is a simple example system, there will not be a lot of detail about an authorization boundary.</p>
+            </description>
+        </authorization-boundary>
+        <data-flow>
+            <description>
+                <p>This is a simple example system, there will not be a lot of detail about data flow.</p>
+            </description>
+        </data-flow>
+        <responsible-party role-id="author">
+            <party-uuid>c8780e68-a98d-4f62-a37f-6bf631ac9b5e</party-uuid>
+            <remarks>
+                <p>This example is not highly realistic, the content authors also design, implement, and maintain the system.</p>
+            </remarks>
+        </responsible-party>
+    </system-characteristics>
+    <system-implementation>
+        <user uuid="6e911e5e-d4f5-4b7d-ac7d-9c8b9b908c32">
+        </user>
+        <component uuid="dddf4724-a2f6-4d44-a632-45435300dbd2" type="web-server"></component>
+        <component uuid="e33d04cb-a447-4c7f-82b3-48edc3ba0385" type="operating-system"></component>
+        <component uuid="480cfb21-ea4e-486b-859e-2164dc237705" type="virtual-server"></component>
+    </system-implementation>
+</system-security-plan
