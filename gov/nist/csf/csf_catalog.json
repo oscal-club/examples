@@ -19,6 +19,7 @@
         "class" : "category",
         "title" : "Asset Management Category",
         "parts" : [ {
+          "id" : "ID.AM_overview",
           "name" : "overview",
           "prose" : "The data, personnel, devices, systems, and facilities that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy."
         } ],
@@ -27,6 +28,7 @@
           "class" : "subcategory",
           "title" : "Assessment Management Subcategory 1",
           "parts" : [ {
+            "id" : "ID.AM-1_statement",
             "name" : "statement",
             "prose" : "Physical devices and systems within the organization are inventoried"
           } ]
@@ -35,6 +37,7 @@
           "class" : "subcategory",
           "title" : "Assessment Management Subcategory 2",
           "parts" : [ {
+            "id" : "ID.AM-2_statement",
             "name" : "statement",
             "prose" : "Software platforms and applications within the organization are inventoried"
           } ]
@@ -43,6 +46,7 @@
           "class" : "subcategory",
           "title" : "Asset Management Subcategory 3",
           "parts" : [ {
+            "id" : "ID.AM-3_statement",
             "name" : "statement",
             "prose" : "Organizational communication and data flows are mapped"
           } ]
@@ -51,6 +55,7 @@
           "class" : "subcategory",
           "title" : "Asset Management Subcategory 4",
           "parts" : [ {
+            "id" : "ID.AM-4_statement",
             "name" : "statement",
             "prose" : "External information systems are catalogued"
           } ]
@@ -59,6 +64,7 @@
           "class" : "subcategory",
           "title" : "Asset Management Subcategory 5",
           "parts" : [ {
+            "id" : "ID.AM-5_statement",
             "name" : "statement",
             "prose" : "Resources (e.g., hardware, devices, data, time, personnel, and software) are prioritized based on their classification, criticality, and business value"
           } ]
@@ -67,6 +73,7 @@
           "class" : "subcategory",
           "title" : "Asset Management Subcategory 6",
           "parts" : [ {
+            "id" : "ID.AM-6_statement",
             "name" : "statement",
             "prose" : "Cybersecurity roles and responsibilities for the entire workforce and third-party stakeholders (e.g., suppliers, customers, partners) are established"
           } ]
@@ -76,6 +83,7 @@
         "class" : "category",
         "title" : "Business Environment Category",
         "parts" : [ {
+          "id" : "ID.BE_overview",
           "name" : "overview",
           "prose" : "The organization's mission, objectives, stakeholders, and activities are understood and prioritized; this information is used to inform cybersecurity roles, responsibilities, and risk management decisions."
         } ],
@@ -84,6 +92,7 @@
           "class" : "subcategory",
           "title" : "Business Environment Subcategory 1",
           "parts" : [ {
+            "id" : "ID.BE-1_statement",
             "name" : "statement",
             "prose" : "The organization's role in the supply chain is identified and communicated"
           } ]
@@ -92,6 +101,7 @@
           "class" : "subcategory",
           "title" : "Business Environment Subcategory 2",
           "parts" : [ {
+            "id" : "ID.BE-2_statement",
             "name" : "statement",
             "prose" : "The organization's place in critical infrastructure and its industry sector is identified and communicated"
           } ]
@@ -100,6 +110,7 @@
           "class" : "subcategory",
           "title" : "Business Environment Subcategory 3",
           "parts" : [ {
+            "id" : "ID.BE-3_statement",
             "name" : "statement",
             "prose" : "Priorities for organizational mission, objectives, and activities are established and communicated"
           } ]
@@ -108,6 +119,7 @@
           "class" : "subcategory",
           "title" : "Business Environment Subcategory 4",
           "parts" : [ {
+            "id" : "ID.BE-4_statement",
             "name" : "statement",
             "prose" : "Dependencies and critical functions for delivery of critical services are established"
           } ]
@@ -116,6 +128,7 @@
           "class" : "subcategory",
           "title" : "Business Environment Subcategory 5",
           "parts" : [ {
+            "id" : "ID.BE-5_statement",
             "name" : "statement",
             "prose" : "Resilience requirements to support delivery of critical services are established for all operating states (e.g. under duress/attack, during recovery, normal operations)"
           } ]
@@ -125,6 +138,7 @@
         "class" : "category",
         "title" : "Governance Category",
         "parts" : [ {
+          "id" : "ID.GV_overview",
           "name" : "overview",
           "prose" : "The policies, procedures, and processes to manage and monitor the organization's regulatory, legal, risk, environmental, and operational requirements are understood and inform the management of cybersecurity risk."
         } ],
@@ -133,6 +147,7 @@
           "class" : "subcategory",
           "title" : "Governance Subcategory 1",
           "parts" : [ {
+            "id" : "ID.GV-1_statement",
             "name" : "statement",
             "prose" : "Organizational cybersecurity policy is established and communicated"
           } ]
@@ -141,6 +156,7 @@
           "class" : "subcategory",
           "title" : "Governance Subcategory 2",
           "parts" : [ {
+            "id" : "ID.GV-2_statement",
             "name" : "statement",
             "prose" : "Cybersecurity roles and responsibilities are coordinated and aligned with internal roles and external partners"
           } ]
@@ -149,6 +165,7 @@
           "class" : "subcategory",
           "title" : "Governance Subcategory 3",
           "parts" : [ {
+            "id" : "ID.GV-3_statement",
             "name" : "statement",
             "prose" : "Legal and regulatory requirements regarding cybersecurity, including privacy and civil liberties obligations, are understood and managed"
           } ]
@@ -157,6 +174,7 @@
           "class" : "subcategory",
           "title" : "Governance Subcategory 4",
           "parts" : [ {
+            "id" : "ID.GV-4_statement",
             "name" : "statement",
             "prose" : "Governance and risk management processes address cybersecurity risks"
           } ]
@@ -166,6 +184,7 @@
         "class" : "category",
         "title" : "Risk Assessment Category",
         "parts" : [ {
+          "id" : "ID.RA_overview",
           "name" : "overview",
           "prose" : "The organization understands the cybersecurity risk to organizational operations (including mission, functions, image, or reputation), organizational assets, and individuals."
         } ],
@@ -174,6 +193,7 @@
           "class" : "subcategory",
           "title" : "Risk Assessment Subcategory 1",
           "parts" : [ {
+            "id" : "ID.RA-1_statement",
             "name" : "statement",
             "prose" : "Asset vulnerabilities are identified and documented"
           } ]
@@ -182,6 +202,7 @@
           "class" : "subcategory",
           "title" : "Risk Assessment Subcategory 2",
           "parts" : [ {
+            "id" : "ID.RA-2_statement",
             "name" : "statement",
             "prose" : "Cyber threat intelligence is received from information sharing forums and sources"
           } ]
@@ -190,6 +211,7 @@
           "class" : "subcategory",
           "title" : "Risk Assessment Subcategory 3",
           "parts" : [ {
+            "id" : "ID.RA-3_statement",
             "name" : "statement",
             "prose" : "Threats, both internal and external, are identified and documented"
           } ]
@@ -198,6 +220,7 @@
           "class" : "subcategory",
           "title" : "Risk Assessment Subcategory 4",
           "parts" : [ {
+            "id" : "ID.RA-4_statement",
             "name" : "statement",
             "prose" : "Potential business impacts and likelihoods are identified"
           } ]
@@ -206,6 +229,7 @@
           "class" : "subcategory",
           "title" : "Risk Assessment Subcategory 5",
           "parts" : [ {
+            "id" : "ID.RA-5_statement",
             "name" : "statement",
             "prose" : "Threats, vulnerabilities, likelihoods, and impacts are used to determine risk"
           } ]
@@ -214,6 +238,7 @@
           "class" : "subcategory",
           "title" : "Risk Assessment Subcategory 6",
           "parts" : [ {
+            "id" : "ID.RA-6_statement",
             "name" : "statement",
             "prose" : "Risk responses are identified and prioritized"
           } ]
@@ -223,6 +248,7 @@
         "class" : "category",
         "title" : "Risk Management Strategy Category",
         "parts" : [ {
+          "id" : "ID.RM_overview",
           "name" : "overview",
           "prose" : "The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support operational risk decisions."
         } ],
@@ -231,6 +257,7 @@
           "class" : "subcategory",
           "title" : "Risk Management Strategy Subcategory 1",
           "parts" : [ {
+            "id" : "ID.RM-1_statement",
             "name" : "statement",
             "prose" : "Risk management processes are established, managed, and agreed to by organizational stakeholders"
           } ]
@@ -239,6 +266,7 @@
           "class" : "subcategory",
           "title" : "Risk Management Strategy Subcategory 2",
           "parts" : [ {
+            "id" : "ID.RM-2_statement",
             "name" : "statement",
             "prose" : "Organizational risk tolerance is determined and clearly expressed"
           } ]
@@ -247,6 +275,7 @@
           "class" : "subcategory",
           "title" : "Risk Management Strategy Subcategory 3",
           "parts" : [ {
+            "id" : "ID.RM-3_statement",
             "name" : "statement",
             "prose" : "The organization's determination of risk tolerance is informed by its role in critical infrastructure and sector specific risk analysis"
           } ]
@@ -256,6 +285,7 @@
         "class" : "category",
         "title" : "Supply Chain Category",
         "parts" : [ {
+          "id" : "ID.SC_overview",
           "name" : "overview",
           "prose" : "The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support risk decisions associated with managing supply chain risk. The organization has established and implemented the processes to identify, assess and manage supply chain risks."
         } ],
@@ -264,6 +294,7 @@
           "class" : "subcategory",
           "title" : "Supply Chain Subcategory 1",
           "parts" : [ {
+            "id" : "ID.SC-1_statement",
             "name" : "statement",
             "prose" : "Cyber supply chain risk management processes are identified, established, assessed, managed, and agreed to by organizational stakeholders"
           } ]
@@ -272,6 +303,7 @@
           "class" : "subcategory",
           "title" : "Supply Chain Subcategory 2",
           "parts" : [ {
+            "id" : "ID.SC-2_statement",
             "name" : "statement",
             "prose" : "Suppliers and third party partners of information systems, components, and services are identified, prioritized, and assessed using a cyber supply chain risk assessment process"
           } ]
@@ -280,6 +312,7 @@
           "class" : "subcategory",
           "title" : "Supply Chain Subcategory 3",
           "parts" : [ {
+            "id" : "ID.SC-3_statement",
             "name" : "statement",
             "prose" : "Contracts with suppliers and third-party partners are used to implement appropriate measures designed to meet the objectives of an organization's cybersecurity program and Cyber Supply Chain Risk Management Plan"
           } ]
@@ -288,6 +321,7 @@
           "class" : "subcategory",
           "title" : "Supply Chain Subcategory 4",
           "parts" : [ {
+            "id" : "ID.SC-4_statement",
             "name" : "statement",
             "prose" : "Suppliers and third-party partners are routinely assessed using audits, test results, or other forms of evaluations to confirm they are meeting their contractual obligations"
           } ]
@@ -296,6 +330,7 @@
           "class" : "subcategory",
           "title" : "Supply Chain Subcategory 5",
           "parts" : [ {
+            "id" : "ID.SC-5_statement",
             "name" : "statement",
             "prose" : "Response and recovery planning and testing are conducted with suppliers and third-party providers"
           } ]
@@ -310,6 +345,7 @@
         "class" : "category",
         "title" : "Identity Management, Authentication, and Access Control Category",
         "parts" : [ {
+          "id" : "PR.AC_overview",
           "name" : "overview",
           "prose" : "Access to physical and logical assets and associated facilities is limited to authorized users, processes, and devices, and is managed consistent with the assessed risk of unauthorized access to authorized activities and transactions."
         } ],
@@ -318,6 +354,7 @@
           "class" : "subcategory",
           "title" : "Identity Management, Authentication, and Access Control Subcategory 1",
           "parts" : [ {
+            "id" : "PR.AC-1_statement",
             "name" : "statement",
             "prose" : "Identities and credentials are issued, managed, verified, revoked, and audited for authorized devices, users and processes"
           } ]
@@ -326,6 +363,7 @@
           "class" : "subcategory",
           "title" : "Identity Management, Authentication, and Access Control Subcategory 2",
           "parts" : [ {
+            "id" : "PR.AC-2_statement",
             "name" : "statement",
             "prose" : "Physical access to assets is managed and protected"
           } ]
@@ -334,6 +372,7 @@
           "class" : "subcategory",
           "title" : "Identity Management, Authentication, and Access Control Subcategory 3",
           "parts" : [ {
+            "id" : "PR.AC-3_statement",
             "name" : "statement",
             "prose" : "Remote access is managed"
           } ]
@@ -342,6 +381,7 @@
           "class" : "subcategory",
           "title" : "Identity Management, Authentication, and Access Control Subcategory 4",
           "parts" : [ {
+            "id" : "PR.AC-4_statement",
             "name" : "statement",
             "prose" : "Access permissions and authorizations are managed, incorporating the principles of least privilege and separation of duties"
           } ]
@@ -350,6 +390,7 @@
           "class" : "subcategory",
           "title" : "Identity Management, Authentication, and Access Control Subcategory 5",
           "parts" : [ {
+            "id" : "PR.AC-5_statement",
             "name" : "statement",
             "prose" : "Network integrity is protected (e.g., network segregation, network segmentation)"
           } ]
@@ -358,6 +399,7 @@
           "class" : "subcategory",
           "title" : "Identity Management, Authentication, and Access Control Subcategory 6",
           "parts" : [ {
+            "id" : "PR.AC-6_statement",
             "name" : "statement",
             "prose" : "Identities are proofed and bound to credentials and asserted in interactions"
           } ]
@@ -366,6 +408,7 @@
           "class" : "subcategory",
           "title" : "Identity Management, Authentication, and Access Control Subcategory 7",
           "parts" : [ {
+            "id" : "PR.AC-7_statement",
             "name" : "statement",
             "prose" : "Users, devices, and other assets are authenticated (e.g., single-factor, multi-factor) commensurate with the risk of the transaction (e.g., individuals’ security and privacy risks and other organizational risks)"
           } ]
@@ -375,6 +418,7 @@
         "class" : "category",
         "title" : "Awareness Training Category",
         "parts" : [ {
+          "id" : "PR.AT_overview",
           "name" : "overview",
           "prose" : "The organization's personnel and partners are provided cybersecurity awareness education and are trained to perform their cybersecurity-related duties and responsibilities consistent with related policies, procedures, and agreements."
         } ],
@@ -383,6 +427,7 @@
           "class" : "subcategory",
           "title" : "Awareness Training Subcategory 1",
           "parts" : [ {
+            "id" : "PR.AT-1_statement",
             "name" : "statement",
             "prose" : "All users are informed and trained"
           } ]
@@ -391,6 +436,7 @@
           "class" : "subcategory",
           "title" : "Awareness Training Subcategory 2",
           "parts" : [ {
+            "id" : "PR.AT-2_statement",
             "name" : "statement",
             "prose" : "Privileged users understand their roles and responsibilities"
           } ]
@@ -399,6 +445,7 @@
           "class" : "subcategory",
           "title" : "Awareness Training Subcategory 3",
           "parts" : [ {
+            "id" : "PR.AT-3_statement",
             "name" : "statement",
             "prose" : "Third-party stakeholders (e.g., suppliers, customers, partners) understand their roles and responsibilities"
           } ]
@@ -407,6 +454,7 @@
           "class" : "subcategory",
           "title" : "Awareness Training Subcategory 4",
           "parts" : [ {
+            "id" : "PR.AT-4_statement",
             "name" : "statement",
             "prose" : "Senior executives understand their roles and responsibilities"
           } ]
@@ -415,6 +463,7 @@
           "class" : "subcategory",
           "title" : "Awareness Training Subcategory 5",
           "parts" : [ {
+            "id" : "PR.AT-5_statement",
             "name" : "statement",
             "prose" : "Physical and cybersecurity personnel understand their roles and responsibilities"
           } ]
@@ -424,6 +473,7 @@
         "class" : "category",
         "title" : "Data Security Category",
         "parts" : [ {
+          "id" : "PR.DS_overview",
           "name" : "overview",
           "prose" : "Information and records (data) are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information."
         } ],
@@ -432,6 +482,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 1",
           "parts" : [ {
+            "id" : "PR.DS-1_statement",
             "name" : "statement",
             "prose" : "Data-at-rest is protected"
           } ]
@@ -440,6 +491,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 2",
           "parts" : [ {
+            "id" : "PR.DS-2_statement",
             "name" : "statement",
             "prose" : "Data-in-transit is protected"
           } ]
@@ -448,6 +500,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 3",
           "parts" : [ {
+            "id" : "PR.DS-3_statement",
             "name" : "statement",
             "prose" : "Assets are formally managed throughout removal, transfers, and disposition"
           } ]
@@ -456,6 +509,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 4",
           "parts" : [ {
+            "id" : "PR.DS-4_statement",
             "name" : "statement",
             "prose" : "Adequate capacity to ensure availability is maintained"
           } ]
@@ -464,6 +518,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 5",
           "parts" : [ {
+            "id" : "PR.DS-5_statement",
             "name" : "statement",
             "prose" : "Protections against data leaks are implemented"
           } ]
@@ -472,6 +527,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 6",
           "parts" : [ {
+            "id" : "PR.DS-6_statement",
             "name" : "statement",
             "prose" : "Integrity checking mechanisms are used to verify software, firmware, and information integrity"
           } ]
@@ -480,6 +536,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 7",
           "parts" : [ {
+            "id" : "PR.DS-7_statement",
             "name" : "statement",
             "prose" : "The development and testing environment(s) are separate from the production environment"
           } ]
@@ -488,6 +545,7 @@
           "class" : "subcategory",
           "title" : "Data Security Subcategory 8",
           "parts" : [ {
+            "id" : "PR.DS-8_statement",
             "name" : "statement",
             "prose" : "Integrity checking mechanisms are used to verify hardware integrity"
           } ]
@@ -497,6 +555,7 @@
         "class" : "category",
         "title" : "Information Protection Processes and Procedures Category",
         "parts" : [ {
+          "id" : "PR.IP_overview",
           "name" : "overview",
           "prose" : "Security policies (that address purpose, scope, roles, responsibilities, management commitment, and coordination among organizational entities), processes, and procedures are maintained and used to manage protection of information systems and assets."
         } ],
@@ -505,6 +564,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 1",
           "parts" : [ {
+            "id" : "PR.IP-1_statement",
             "name" : "statement",
             "prose" : "A baseline configuration of information technology/industrial control systems is created and maintained incorporating security principles (e.g. concept of least functionality)"
           } ]
@@ -513,6 +573,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 2",
           "parts" : [ {
+            "id" : "PR.IP-2_statement",
             "name" : "statement",
             "prose" : "A System Development Life Cycle to manage systems is implemented"
           } ]
@@ -521,6 +582,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 3",
           "parts" : [ {
+            "id" : "PR.IP-3_statement",
             "name" : "statement",
             "prose" : "Configuration change control processes are in place"
           } ]
@@ -529,6 +591,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 4",
           "parts" : [ {
+            "id" : "PR.IP-4_statement",
             "name" : "statement",
             "prose" : "Backups of information are conducted, maintained, and tested"
           } ]
@@ -537,6 +600,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 5",
           "parts" : [ {
+            "id" : "PR.IP-5_statement",
             "name" : "statement",
             "prose" : "Policy and regulations regarding the physical operating environment for organizational assets are met"
           } ]
@@ -545,6 +609,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 6",
           "parts" : [ {
+            "id" : "PR.IP-6_statement",
             "name" : "statement",
             "prose" : "Data is destroyed according to policy"
           } ]
@@ -553,6 +618,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 7",
           "parts" : [ {
+            "id" : "PR.IP-7_statement",
             "name" : "statement",
             "prose" : "Protection processes are improved"
           } ]
@@ -561,6 +627,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 8",
           "parts" : [ {
+            "id" : "PR.IP-8_statement",
             "name" : "statement",
             "prose" : "Effectiveness of protection technologies is shared"
           } ]
@@ -569,6 +636,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 9",
           "parts" : [ {
+            "id" : "PR.IP-9_statement",
             "name" : "statement",
             "prose" : "Response plans (Incident Response and Business Continuity) and recovery plans (Incident Recovery and Disaster Recovery) are in place and managed"
           } ]
@@ -577,6 +645,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 10",
           "parts" : [ {
+            "id" : "PR.IP-10_statement",
             "name" : "statement",
             "prose" : "Response and recovery plans are tested"
           } ]
@@ -585,6 +654,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 11",
           "parts" : [ {
+            "id" : "PR.IP-11_statement",
             "name" : "statement",
             "prose" : "Cybersecurity is included in human resources practices (e.g., deprovisioning, personnel screening)"
           } ]
@@ -593,6 +663,7 @@
           "class" : "subcategory",
           "title" : "Information Protection Processes and Procedures Subcategory 12",
           "parts" : [ {
+            "id" : "PR.IP-12_statement",
             "name" : "statement",
             "prose" : "A vulnerability management plan is developed and implemented"
           } ]
@@ -602,6 +673,7 @@
         "class" : "category",
         "title" : "Maintenance Category",
         "parts" : [ {
+          "id" : "PR.MA_overview",
           "name" : "overview",
           "prose" : "Maintenance and repairs of industrial control and information system components are performed consistent with policies and procedures."
         } ],
@@ -610,6 +682,7 @@
           "class" : "subcategory",
           "title" : "Maintenance Subcategory 1",
           "parts" : [ {
+            "id" : "PR.MA-1_statement",
             "name" : "statement",
             "prose" : "Maintenance and repair of organizational assets are performed and logged, with approved and controlled tools"
           } ]
@@ -618,6 +691,7 @@
           "class" : "subcategory",
           "title" : "Maintenance Subcategory 2",
           "parts" : [ {
+            "id" : "PR.MA-2_statement",
             "name" : "statement",
             "prose" : "Remote maintenance of organizational assets is approved, logged, and performed in a manner that prevents unauthorized access"
           } ]
@@ -627,6 +701,7 @@
         "class" : "category",
         "title" : "Protective Technology Category",
         "parts" : [ {
+          "id" : "PR.PT_overview",
           "name" : "overview",
           "prose" : "Technical security solutions are managed to ensure the security and resilience of systems and assets, consistent with related policies, procedures, and agreements."
         } ],
@@ -635,6 +710,7 @@
           "class" : "subcategory",
           "title" : "Protective Technology Subcategory 1",
           "parts" : [ {
+            "id" : "PR.PT-1_statement",
             "name" : "statement",
             "prose" : "Audit/log records are determined, documented, implemented, and reviewed in accordance with policy"
           } ]
@@ -643,6 +719,7 @@
           "class" : "subcategory",
           "title" : "Protective Technology Subcategory 2",
           "parts" : [ {
+            "id" : "PR.PT-2_statement",
             "name" : "statement",
             "prose" : "Removable media is protected and its use restricted according to policy"
           } ]
@@ -651,6 +728,7 @@
           "class" : "subcategory",
           "title" : "Protective Technology Subcategory 3",
           "parts" : [ {
+            "id" : "PR.PT-3_statement",
             "name" : "statement",
             "prose" : "The principle of least functionality is incorporated by configuring systems to provide only essential capabilities"
           } ]
@@ -659,6 +737,7 @@
           "class" : "subcategory",
           "title" : "Protective Technology Subcategory 4",
           "parts" : [ {
+            "id" : "PR.PT-4_statement",
             "name" : "statement",
             "prose" : "Communications and control networks are protected"
           } ]
@@ -667,6 +746,7 @@
           "class" : "subcategory",
           "title" : "Protective Technology Subcategory 5",
           "parts" : [ {
+            "id" : "PR.PT-5_statement",
             "name" : "statement",
             "prose" : "Mechanisms (e.g., failsafe, load balancing, hot swap) are implemented to achieve resilience requirements in normal and adverse situations"
           } ]
@@ -681,6 +761,7 @@
         "class" : "category",
         "title" : "Anomalies and Events Category",
         "parts" : [ {
+          "id" : "DE.AE_overview",
           "name" : "overview",
           "prose" : "Anomalous activity is detected and the potential impact of events is understood."
         } ],
@@ -689,6 +770,7 @@
           "class" : "subcategory",
           "title" : "Anomalies and Events Subcategory 1",
           "parts" : [ {
+            "id" : "DE.AE-1_statement",
             "name" : "statement",
             "prose" : "A baseline of network operations and expected data flows for users and systems is established and managed"
           } ]
@@ -697,6 +779,7 @@
           "class" : "subcategory",
           "title" : "Anomalies and Events Subcategory 2",
           "parts" : [ {
+            "id" : "DE.AE-2_statement",
             "name" : "statement",
             "prose" : "Detected events are analyzed to understand attack targets and methods"
           } ]
@@ -705,6 +788,7 @@
           "class" : "subcategory",
           "title" : "Anomalies and Events Subcategory 3",
           "parts" : [ {
+            "id" : "DE.AE-3_statement",
             "name" : "statement",
             "prose" : "Event data are collected and correlated from multiple sources and sensors"
           } ]
@@ -713,6 +797,7 @@
           "class" : "subcategory",
           "title" : "Anomalies and Events Subcategory 4",
           "parts" : [ {
+            "id" : "DE.AE-4_statement",
             "name" : "statement",
             "prose" : "Impact of events is determined"
           } ]
@@ -721,6 +806,7 @@
           "class" : "subcategory",
           "title" : "Anomalies and Events Subcategory 5",
           "parts" : [ {
+            "id" : "DE.AE-5_statement",
             "name" : "statement",
             "prose" : "Incident alert thresholds are established"
           } ]
@@ -730,6 +816,7 @@
         "class" : "category",
         "title" : "Security Continuous Monitoring Category",
         "parts" : [ {
+          "id" : "DE.CM_overview",
           "name" : "overview",
           "prose" : "The information system and assets are monitored to identify cybersecurity events and verify the effectiveness of protective measures."
         } ],
@@ -738,6 +825,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 1",
           "parts" : [ {
+            "id" : "DE.CM-1_statement",
             "name" : "statement",
             "prose" : "The network is monitored to detect potential cybersecurity events"
           } ]
@@ -746,6 +834,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 2",
           "parts" : [ {
+            "id" : "DE.CM-2_statement",
             "name" : "statement",
             "prose" : "The physical environment is monitored to detect potential cybersecurity events"
           } ]
@@ -754,6 +843,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 3",
           "parts" : [ {
+            "id" : "DE.CM-3_statement",
             "name" : "statement",
             "prose" : "Personnel activity is monitored to detect potential cybersecurity events"
           } ]
@@ -762,6 +852,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 4",
           "parts" : [ {
+            "id" : "DE.CM-4_statement",
             "name" : "statement",
             "prose" : "Malicious code is detected"
           } ]
@@ -770,6 +861,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 5",
           "parts" : [ {
+            "id" : "DE.CM-5_statement",
             "name" : "statement",
             "prose" : "Unauthorized mobile code is detected"
           } ]
@@ -778,6 +870,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 6",
           "parts" : [ {
+            "id" : "DE.CM-6_statement",
             "name" : "statement",
             "prose" : "External service provider activity is monitored to detect potential cybersecurity events"
           } ]
@@ -786,6 +879,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 7",
           "parts" : [ {
+            "id" : "DE.CM-7_statement",
             "name" : "statement",
             "prose" : "Monitoring for unauthorized personnel, connections, devices, and software is performed"
           } ]
@@ -794,6 +888,7 @@
           "class" : "subcategory",
           "title" : "Security Continuous Monitoring Subcategory 8",
           "parts" : [ {
+            "id" : "DE.CM-8_statement",
             "name" : "statement",
             "prose" : "Vulnerability scans are performed"
           } ]
@@ -803,6 +898,7 @@
         "class" : "category",
         "title" : "Detection Processes Category",
         "parts" : [ {
+          "id" : "DE.DP_overview",
           "name" : "overview",
           "prose" : "Detection processes and procedures are maintained and tested to ensure awareness of anomalous events."
         } ],
@@ -811,6 +907,7 @@
           "class" : "subcategory",
           "title" : "Detection Processes Subcategory 1",
           "parts" : [ {
+            "id" : "DE.DP-1_statement",
             "name" : "statement",
             "prose" : "Roles and responsibilities for detection are well defined to ensure accountability"
           } ]
@@ -819,6 +916,7 @@
           "class" : "subcategory",
           "title" : "Detection Processes Subcategory 2",
           "parts" : [ {
+            "id" : "DE.DP-2_statement",
             "name" : "statement",
             "prose" : "Detection activities comply with all applicable requirements"
           } ]
@@ -827,6 +925,7 @@
           "class" : "subcategory",
           "title" : "Detection Processes Subcategory 3",
           "parts" : [ {
+            "id" : "DE.DP-3_statement",
             "name" : "statement",
             "prose" : "Detection processes are tested"
           } ]
@@ -835,6 +934,7 @@
           "class" : "subcategory",
           "title" : "Detection Processes Subcategory X",
           "parts" : [ {
+            "id" : "DE.DP-4_statement",
             "name" : "statement",
             "prose" : "Event detection information is communicated"
           } ]
@@ -843,6 +943,7 @@
           "class" : "subcategory",
           "title" : "Detection Processes Subcategory 5",
           "parts" : [ {
+            "id" : "DE.DP-5_statement",
             "name" : "statement",
             "prose" : "Detection processes are continuously improved"
           } ]
@@ -857,6 +958,7 @@
         "class" : "category",
         "title" : "Response Planning Category",
         "parts" : [ {
+          "id" : "RS.RP_overview",
           "name" : "overview",
           "prose" : "Response processes and procedures are executed and maintained, to ensure response to detected cybersecurity incidents."
         } ],
@@ -865,6 +967,7 @@
           "class" : "subcategory",
           "title" : "Response Planning Subcategory 1",
           "parts" : [ {
+            "id" : "RS.RP-1_statement",
             "name" : "statement",
             "prose" : "Response plan is executed during or after an incident"
           } ]
@@ -874,6 +977,7 @@
         "class" : "category",
         "title" : "Response Communications Category",
         "parts" : [ {
+          "id" : "RS.CO_overview",
           "name" : "overview",
           "prose" : "Response activities are coordinated with internal and external stakeholders (e.g. external support from law enforcement agencies)."
         } ],
@@ -882,6 +986,7 @@
           "class" : "subcategory",
           "title" : "Response Communications Subcategory 1",
           "parts" : [ {
+            "id" : "RS.CO-1_statement",
             "name" : "statement",
             "prose" : "Personnel know their roles and order of operations when a response is needed"
           } ]
@@ -890,6 +995,7 @@
           "class" : "subcategory",
           "title" : "Response Communications Subcategory 2",
           "parts" : [ {
+            "id" : "RS.CO-2_statement",
             "name" : "statement",
             "prose" : "Incidents are reported consistent with established criteria"
           } ]
@@ -898,6 +1004,7 @@
           "class" : "subcategory",
           "title" : "Response Communications Subcategory 3",
           "parts" : [ {
+            "id" : "RS.CO-3_statement",
             "name" : "statement",
             "prose" : "Information is shared consistent with response plans"
           } ]
@@ -906,6 +1013,7 @@
           "class" : "subcategory",
           "title" : "Response Communications Subcategory 4",
           "parts" : [ {
+            "id" : "RS.CO-4_statement",
             "name" : "statement",
             "prose" : "Coordination with stakeholders occurs consistent with response plans"
           } ]
@@ -914,6 +1022,7 @@
           "class" : "subcategory",
           "title" : "Response Communications Subcategory 5",
           "parts" : [ {
+            "id" : "RS.CO-5_statement",
             "name" : "statement",
             "prose" : "Voluntary information sharing occurs with external stakeholders to achieve broader cybersecurity situational awareness"
           } ]
@@ -923,6 +1032,7 @@
         "class" : "category",
         "title" : "Analysis Category",
         "parts" : [ {
+          "id" : "RS.AN_overview",
           "name" : "overview",
           "prose" : "Analysis is conducted to ensure effective response and support recovery activities."
         } ],
@@ -931,6 +1041,7 @@
           "class" : "subcategory",
           "title" : "Analysis Subcategory 1",
           "parts" : [ {
+            "id" : "RS.AN-1_statement",
             "name" : "statement",
             "prose" : "Notifications from detection systems are investigated"
           } ]
@@ -939,6 +1050,7 @@
           "class" : "subcategory",
           "title" : "Analysis Subcategory 2",
           "parts" : [ {
+            "id" : "RS.AN-2_statement",
             "name" : "statement",
             "prose" : "The impact of the incident is understood"
           } ]
@@ -947,6 +1059,7 @@
           "class" : "subcategory",
           "title" : "Analysis Subcategory 3",
           "parts" : [ {
+            "id" : "RS.AN-3_statement",
             "name" : "statement",
             "prose" : "Forensics are performed"
           } ]
@@ -955,6 +1068,7 @@
           "class" : "subcategory",
           "title" : "Analysis Subcategory 4",
           "parts" : [ {
+            "id" : "RS.AN-4_statement",
             "name" : "statement",
             "prose" : "Incidents are categorized consistent with response plans"
           } ]
@@ -963,6 +1077,7 @@
           "class" : "subcategory",
           "title" : "Analysis Subcategory 5",
           "parts" : [ {
+            "id" : "RS.AN-5_statement",
             "name" : "statement",
             "prose" : "Processes are established to receive, analyze and respond to vulnerabilities disclosed to the organization from internal and external sources (e.g. internal testing, security bulletins, or security researchers)"
           } ]
@@ -972,6 +1087,7 @@
         "class" : "category",
         "title" : "Mitigation Category",
         "parts" : [ {
+          "id" : "RS.MI_overview",
           "name" : "overview",
           "prose" : "Activities are performed to prevent expansion of an event, mitigate its effects, and resolve the incident."
         } ],
@@ -980,6 +1096,7 @@
           "class" : "subcategory",
           "title" : "Mitigation Subcategory 1",
           "parts" : [ {
+            "id" : "RS.MI-1_statement",
             "name" : "statement",
             "prose" : "Incidents are contained"
           } ]
@@ -988,6 +1105,7 @@
           "class" : "subcategory",
           "title" : "Mitigation Subcategory 2",
           "parts" : [ {
+            "id" : "RS.MI-2_statement",
             "name" : "statement",
             "prose" : "Incidents are mitigated"
           } ]
@@ -996,6 +1114,7 @@
           "class" : "subcategory",
           "title" : "Mitigation Subcategory 3",
           "parts" : [ {
+            "id" : "RS.MI-3_statement",
             "name" : "statement",
             "prose" : "Newly identified vulnerabilities are mitigated or documented as accepted risks"
           } ]
@@ -1005,6 +1124,7 @@
         "class" : "category",
         "title" : "Improvements Category",
         "parts" : [ {
+          "id" : "RS.IM_overview",
           "name" : "overview",
           "prose" : "Organizational response activities are improved by incorporating lessons learned from current and previous detection/response activities."
         } ],
@@ -1013,14 +1133,16 @@
           "class" : "subcategory",
           "title" : "Improvements Subcategory 2",
           "parts" : [ {
+            "id" : "RS.IM-2_statement",
             "name" : "statement",
             "prose" : "Response plans incorporate lessons learned"
           } ]
         }, {
-          "id" : "RS.IM-2",
+          "id" : "RS.IM-3",
           "class" : "subcategory",
-          "title" : "Improvements Subcategory 2",
+          "title" : "Improvements Subcategory 3",
           "parts" : [ {
+            "id" : "RS.IM-3_statement",
             "name" : "statement",
             "prose" : "Response strategies are updated"
           } ]
@@ -1035,6 +1157,7 @@
         "class" : "category",
         "title" : "Recovery Planning Category",
         "parts" : [ {
+          "id" : "RC.RP_overview",
           "name" : "overview",
           "prose" : "Recovery processes and procedures are executed and maintained to ensure restoration of systems or assets affected by cybersecurity incidents."
         } ],
@@ -1043,6 +1166,7 @@
           "class" : "subcategory",
           "title" : "Recovery Planning Subcategory 1",
           "parts" : [ {
+            "id" : "RC.RP-1_statement",
             "name" : "statement",
             "prose" : "Recovery plan is executed during or after a cybersecurity incident"
           } ]
@@ -1052,6 +1176,7 @@
         "class" : "category",
         "title" : "Improvements Category",
         "parts" : [ {
+          "id" : "RC.IM_overview",
           "name" : "overview",
           "prose" : "Recovery planning and processes are improved by incorporating lessons learned into future activities."
         } ],
@@ -1060,6 +1185,7 @@
           "class" : "subcategory",
           "title" : "Improvements Subcategory 1",
           "parts" : [ {
+            "id" : "RC.IM-1_statement",
             "name" : "statement",
             "prose" : "Recovery plans incorporate lessons learned"
           } ]
@@ -1068,6 +1194,7 @@
           "class" : "subcategory",
           "title" : "Improvements Subcategory 2",
           "parts" : [ {
+            "id" : "RC.IM-2_statement",
             "name" : "statement",
             "prose" : "Recovery strategies are updated"
           } ]
@@ -1077,6 +1204,7 @@
         "class" : "category",
         "title" : "Communications Category",
         "parts" : [ {
+          "id" : "RC.CO_overview",
           "name" : "overview",
           "prose" : "Restoration activities are coordinated with internal and external parties (e.g. coordinating centers, Internet Service Providers, owners of attacking systems, victims, other CSIRTs, and vendors)."
         } ],
@@ -1085,6 +1213,7 @@
           "class" : "subcategory",
           "title" : "Communications Subcategory 1",
           "parts" : [ {
+            "id" : "RC.CO-1_statement",
             "name" : "statement",
             "prose" : "Public relations are managed"
           } ]
@@ -1093,6 +1222,7 @@
           "class" : "subcategory",
           "title" : "Communications Subcategory 2",
           "parts" : [ {
+            "id" : "RC.CO-2_statement",
             "name" : "statement",
             "prose" : "Reputation is repaired after an incident"
           } ]
@@ -1101,6 +1231,7 @@
           "class" : "subcategory",
           "title" : "Communications Subcategory 3",
           "parts" : [ {
+            "id" : "RC.CO-3_statement",
             "name" : "statement",
             "prose" : "Reputation is repaired after an incident"
           } ]
