@@ -16,6 +16,9 @@ catalog:
     - id: ID.AM
       class: category
       title: Asset Management Category
+      parts:
+      - name: overview
+        prose: "The data, personnel, devices, systems, and facilities that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy."
       controls:
       - id: ID.AM-1
         class: subcategory
@@ -56,13 +59,16 @@ catalog:
     - id: ID.BE
       class: category
       title: Business Environment Category
+      parts:
+      - name: overview
+        prose: "The organization's mission, objectives, stakeholders, and activities are understood and prioritized; this information is used to inform cybersecurity roles, responsibilities, and risk management decisions."
       controls:
       - id: ID.BE-1
         class: subcategory
         title: Business Environment Subcategory 1
         parts:
         - name: statement
-          prose: The organization’s role in the supply chain is identified and communicated
+          prose: The organization's role in the supply chain is identified and communicated
       - id: ID.BE-2
         class: subcategory
         title: Business Environment Subcategory 2
@@ -90,6 +96,9 @@ catalog:
     - id: ID.GV
       class: category
       title: Governance Category
+      parts:
+      - name: overview
+        prose: "The policies, procedures, and processes to manage and monitor the organization's regulatory, legal, risk, environmental, and operational requirements are understood and inform the management of cybersecurity risk."
       controls:
       - id: ID.GV-1
         class: subcategory
@@ -118,6 +127,9 @@ catalog:
     - id: ID.RA
       class: category
       title: Risk Assessment Category
+      parts:
+      - name: overview
+        prose: "The organization understands the cybersecurity risk to organizational operations (including mission, functions, image, or reputation), organizational assets, and individuals."
       controls:
       - id: ID.RA-1
         class: subcategory
@@ -158,6 +170,9 @@ catalog:
     - id: ID.RM
       class: category
       title: Risk Management Strategy Category
+      parts:
+      - name: overview
+        prose: "The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support operational risk decisions."
       controls:
       - id: ID.RM-1
         class: subcategory
@@ -180,6 +195,9 @@ catalog:
     - id: ID.SC
       class: category
       title: Supply Chain Category
+      parts:
+      - name: overview
+        prose: "The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support risk decisions associated with managing supply chain risk. The organization has established and implemented the processes to identify, assess and manage supply chain risks."
       controls:
       - id: ID.SC-1
         class: subcategory
@@ -218,6 +236,9 @@ catalog:
     - id: PR.AC
       class: category
       title: "Identity Management, Authentication, and Access Control Category"
+      parts:
+      - name: overview
+        prose: "Access to physical and logical assets and associated facilities is limited to authorized users, processes, and devices, and is managed consistent with the assessed risk of unauthorized access to authorized activities and transactions."
       controls:
       - id: PR.AC-1
         class: subcategory
@@ -264,6 +285,9 @@ catalog:
     - id: PR.AT
       class: category
       title: Awareness Training Category
+      parts:
+      - name: overview
+        prose: "The organization's personnel and partners are provided cybersecurity awareness education and are trained to perform their cybersecurity-related duties and responsibilities consistent with related policies, procedures, and agreements."
       controls:
       - id: PR.AT-1
         class: subcategory
@@ -298,6 +322,9 @@ catalog:
     - id: PR.DS
       class: category
       title: Data Security Category
+      parts:
+      - name: overview
+        prose: "Information and records (data) are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information."
       controls:
       - id: PR.DS-1
         class: subcategory
@@ -350,6 +377,9 @@ catalog:
     - id: PR.IP
       class: category
       title: Information Protection Processes and Procedures Category
+      parts:
+      - name: overview
+        prose: "Security policies (that address purpose, scope, roles, responsibilities, management commitment, and coordination among organizational entities), processes, and procedures are maintained and used to manage protection of information systems and assets."
       controls:
       - id: PR.IP-1
         class: subcategory
@@ -426,6 +456,9 @@ catalog:
     - id: PR.MA
       class: category
       title: Maintenance Category
+      parts:
+      - name: overview
+        prose: Maintenance and repairs of industrial control and information system components are performed consistent with policies and procedures.
       controls:
       - id: PR.MA-1
         class: subcategory
@@ -442,6 +475,9 @@ catalog:
     - id: PR.PT
       class: category
       title: Protective Technology Category
+      parts:
+      - name: overview
+        prose: "Technical security solutions are managed to ensure the security and resilience of systems and assets, consistent with related policies, procedures, and agreements."
       controls:
       - id: PR.PT-1
         class: subcategory
@@ -480,6 +516,9 @@ catalog:
     - id: DE.AE
       class: category
       title: Anomalies and Events Category
+      parts:
+      - name: overview
+        prose: Anomalous activity is detected and the potential impact of events is understood.
       controls:
       - id: DE.AE-1
         class: subcategory
@@ -514,6 +553,9 @@ catalog:
     - id: DE.CM
       class: category
       title: Security Continuous Monitoring Category
+      parts:
+      - name: overview
+        prose: The information system and assets are monitored to identify cybersecurity events and verify the effectiveness of protective measures.
       controls:
       - id: DE.CM-1
         class: subcategory
@@ -566,6 +608,9 @@ catalog:
     - id: DE.DP
       class: category
       title: Detection Processes Category
+      parts:
+      - name: overview
+        prose: Detection processes and procedures are maintained and tested to ensure awareness of anomalous events.
       controls:
       - id: DE.DP-1
         class: subcategory
@@ -604,6 +649,9 @@ catalog:
     - id: RS.RP
       class: category
       title: Response Planning Category
+      parts:
+      - name: overview
+        prose: "Response processes and procedures are executed and maintained, to ensure response to detected cybersecurity incidents."
       controls:
       - id: RS.RP-1
         class: subcategory
@@ -614,6 +662,9 @@ catalog:
     - id: RS.CO
       class: category
       title: Response Communications Category
+      parts:
+      - name: overview
+        prose: Response activities are coordinated with internal and external stakeholders (e.g. external support from law enforcement agencies).
       controls:
       - id: RS.CO-1
         class: subcategory
@@ -648,6 +699,9 @@ catalog:
     - id: RS.AN
       class: category
       title: Analysis Category
+      parts:
+      - name: overview
+        prose: Analysis is conducted to ensure effective response and support recovery activities.
       controls:
       - id: RS.AN-1
         class: subcategory
@@ -682,6 +736,9 @@ catalog:
     - id: RS.MI
       class: category
       title: Mitigation Category
+      parts:
+      - name: overview
+        prose: "Activities are performed to prevent expansion of an event, mitigate its effects, and resolve the incident."
       controls:
       - id: RS.MI-1
         class: subcategory
@@ -704,6 +761,9 @@ catalog:
     - id: RS.IM
       class: category
       title: Improvements Category
+      parts:
+      - name: overview
+        prose: Organizational response activities are improved by incorporating lessons learned from current and previous detection/response activities.
       controls:
       - id: RS.IM-2
         class: subcategory
@@ -724,6 +784,9 @@ catalog:
     - id: RC.RP
       class: category
       title: Recovery Planning Category
+      parts:
+      - name: overview
+        prose: Recovery processes and procedures are executed and maintained to ensure restoration of systems or assets affected by cybersecurity incidents.
       controls:
       - id: RC.RP-1
         class: subcategory
@@ -734,6 +797,9 @@ catalog:
     - id: RC.IM
       class: category
       title: Improvements Category
+      parts:
+      - name: overview
+        prose: Recovery planning and processes are improved by incorporating lessons learned into future activities.
       controls:
       - id: RC.IM-1
         class: subcategory
@@ -750,6 +816,9 @@ catalog:
     - id: RC.CO
       class: category
       title: Communications Category
+      parts:
+      - name: overview
+        prose: "Restoration activities are coordinated with internal and external parties (e.g. coordinating centers, Internet Service Providers, owners of attacking systems, victims, other CSIRTs, and vendors)."
       controls:
       - id: RC.CO-1
         class: subcategory

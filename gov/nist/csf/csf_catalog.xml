@@ -14,6 +14,9 @@
         <title>Identify Function</title>
         <group class="category" id="ID.AM">
             <title>Asset Management Category</title>
+            <part name="overview">
+                <p>The data, personnel, devices, systems, and facilities that enable the organization to achieve business purposes are identified and managed consistent with their relative importance to organizational objectives and the organization's risk strategy.</p>
+            </part>
             <control class="subcategory" id="ID.AM-1">
                 <title>Assessment Management Subcategory 1</title>
                 <part name="statement">
@@ -25,7 +28,7 @@
                 <part name="statement">
                     <p>Software platforms and applications within the organization are inventoried</p>
                 </part>
-            </control>
+            </control>       
             <control class="subcategory" id="ID.AM-3">
                 <title>Asset Management Subcategory 3</title>
                 <part name="statement">
@@ -53,10 +56,13 @@
         </group>
         <group class="category" id="ID.BE">
             <title>Business Environment Category</title>
+            <part name="overview">
+                <p>The organization's mission, objectives, stakeholders, and activities are understood and prioritized; this information is used to inform cybersecurity roles, responsibilities, and risk management decisions.</p>
+            </part>
             <control class="subcategory" id="ID.BE-1">
                 <title>Business Environment Subcategory 1</title>
                 <part name="statement">
-                    <p>The organization’s role in the supply chain is identified and communicated</p>
+                    <p>The organization's role in the supply chain is identified and communicated</p>
                 </part>
             </control>
             <control class="subcategory" id="ID.BE-2">
@@ -86,6 +92,9 @@
         </group>
         <group class="category" id="ID.GV">
             <title>Governance Category</title>
+            <part name="overview">
+                <p>The policies, procedures, and processes to manage and monitor the organization's regulatory, legal, risk, environmental, and operational requirements are understood and inform the management of cybersecurity risk.</p>
+            </part>
             <control class="subcategory" id="ID.GV-1">
                 <title>Governance Subcategory 1</title>
                 <part name="statement">
@@ -113,6 +122,9 @@
         </group>
         <group class="category" id="ID.RA">
             <title>Risk Assessment Category</title>
+            <part name="overview">
+                <p>The organization understands the cybersecurity risk to organizational operations (including mission, functions, image, or reputation), organizational assets, and individuals.</p>
+            </part>
             <control class="subcategory" id="ID.RA-1">
                 <title>Risk Assessment Subcategory 1</title>
                 <part name="statement">
@@ -152,6 +164,9 @@
         </group>
         <group class="category" id="ID.RM">
             <title>Risk Management Strategy Category</title>
+            <part name="overview">
+                <p>The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support operational risk decisions.</p>
+            </part>            
             <control class="subcategory" id="ID.RM-1">
                 <title>Risk Management Strategy Subcategory 1</title>
                 <part name="statement">
@@ -173,6 +188,9 @@
         </group>
         <group class="category" id="ID.SC">
             <title>Supply Chain Category</title>
+            <part name="overview">
+                <p>The organization's priorities, constraints, risk tolerances, and assumptions are established and used to support risk decisions associated with managing supply chain risk. The organization has established and implemented the processes to identify, assess and manage supply chain risks.</p>
+            </part>            
             <control class="subcategory" id="ID.SC-1">
                 <title>Supply Chain Subcategory 1</title>
                 <part name="statement">
@@ -209,6 +227,9 @@
         <title>Protect Function</title>
         <group class="category" id="PR.AC">
             <title>Identity Management, Authentication, and Access Control Category</title>
+            <part name="overview">
+                <p>Access to physical and logical assets and associated facilities is limited to authorized users, processes, and devices, and is managed consistent with the assessed risk of unauthorized access to authorized activities and transactions.</p>
+            </part>            
             <control class="subcategory" id="PR.AC-1">
                 <title>Identity Management, Authentication, and Access Control Subcategory 1</title>
                 <part name="statement">
@@ -254,6 +275,9 @@
         </group>
         <group class="category" id="PR.AT">
             <title>Awareness Training Category</title>
+            <part name="overview">
+                <p>The organization's personnel and partners are provided cybersecurity awareness education and are trained to perform their cybersecurity-related duties and responsibilities consistent with related policies, procedures, and agreements.</p>
+            </part>            
             <control class="subcategory" id="PR.AT-1">
                 <title>Awareness Training Subcategory 1</title>
                 <part name="statement">
@@ -287,6 +311,9 @@
         </group>
         <group class="category" id="PR.DS">
             <title>Data Security Category</title>
+            <part name="overview">
+                <p>Information and records (data) are managed consistent with the organization's risk strategy to protect the confidentiality, integrity, and availability of information.</p>
+            </part>            
             <control class="subcategory" id="PR.DS-1">
                 <title>Data Security Subcategory 1</title>
                 <part name="statement">
@@ -338,6 +365,9 @@
         </group>
         <group class="category" id="PR.IP">
             <title>Information Protection Processes and Procedures Category</title>
+            <part name="overview">
+                <p>Security policies (that address purpose, scope, roles, responsibilities, management commitment, and coordination among organizational entities), processes, and procedures are maintained and used to manage protection of information systems and assets.</p>
+            </part>            
             <control class="subcategory" id="PR.IP-1">
                 <title>Information Protection Processes and Procedures Subcategory 1</title>
                 <part name="statement">
@@ -413,6 +443,9 @@
         </group>
         <group class="category" id="PR.MA">
             <title>Maintenance Category</title>
+            <part name="overview">
+                <p>Maintenance and repairs of industrial control and information system components are performed consistent with policies and procedures.</p>
+            </part>            
             <control class="subcategory" id="PR.MA-1">
                 <title>Maintenance Subcategory 1</title>
                 <part name="statement">
@@ -428,6 +461,9 @@
         </group>
         <group class="category" id="PR.PT">
             <title>Protective Technology Category</title>
+            <part name="overview">
+                <p>Technical security solutions are managed to ensure the security and resilience of systems and assets, consistent with related policies, procedures, and agreements.</p>
+            </part>
             <control class="subcategory" id="PR.PT-1">
                 <title>Protective Technology Subcategory 1</title>
                 <part name="statement">
@@ -464,6 +500,9 @@
         <title>Detect Function</title>
         <group class="category" id="DE.AE">
             <title>Anomalies and Events Category</title>
+            <part name="overview">
+                <p>Anomalous activity is detected and the potential impact of events is understood.</p>
+            </part>            
             <control class="subcategory" id="DE.AE-1">
                 <title>Anomalies and Events Subcategory 1</title>
                 <part name="statement">
@@ -497,6 +536,9 @@
         </group>
         <group class="category" id="DE.CM">
             <title>Security Continuous Monitoring Category</title>
+            <part name="overview">
+                <p>The information system and assets are monitored to identify cybersecurity events and verify the effectiveness of protective measures.</p>
+            </part>            
             <control class="subcategory" id="DE.CM-1">
                 <title>Security Continuous Monitoring Subcategory 1</title>
                 <part name="statement">
@@ -548,6 +590,9 @@
         </group>
         <group class="category" id="DE.DP">
             <title>Detection Processes Category</title>
+            <part name="overview">
+                <p>Detection processes and procedures are maintained and tested to ensure awareness of anomalous events.</p>
+            </part>            
             <control class="subcategory" id="DE.DP-1">
                 <title>Detection Processes Subcategory 1</title>
                 <part name="statement">
@@ -584,6 +629,9 @@
         <title>Respond Function</title>
         <group class="category" id="RS.RP">
             <title>Response Planning Category</title>
+            <part name="overview">
+                <p>Response processes and procedures are executed and maintained, to ensure response to detected cybersecurity incidents.</p>
+            </part>            
             <control class="subcategory" id="RS.RP-1">
                 <title>Response Planning Subcategory 1</title>
                 <part name="statement">
@@ -593,6 +641,9 @@
         </group>
         <group class="category" id="RS.CO">
             <title>Response Communications Category</title>
+            <part name="overview">
+                <p>Response activities are coordinated with internal and external stakeholders (e.g. external support from law enforcement agencies).</p>
+            </part>            
             <control class="subcategory" id="RS.CO-1">
                 <title>Response Communications Subcategory 1</title>
                 <part name="statement">
@@ -626,6 +677,9 @@
         </group>
         <group class="category" id="RS.AN">
             <title>Analysis Category</title>
+            <part name="overview">
+                <p>Analysis is conducted to ensure effective response and support recovery activities.</p>
+            </part>            
             <control class="subcategory" id="RS.AN-1">
                 <title>Analysis Subcategory 1</title>
                 <part name="statement">
@@ -659,6 +713,9 @@
         </group>
         <group class="category" id="RS.MI">
             <title>Mitigation Category</title>
+            <part name="overview">
+                <p>Activities are performed to prevent expansion of an event, mitigate its effects, and resolve the incident.</p>
+            </part>            
             <control class="subcategory" id="RS.MI-1">
                 <title>Mitigation Subcategory 1</title>
                 <part name="statement">
@@ -680,6 +737,9 @@
         </group>
         <group class="category" id="RS.IM">
             <title>Improvements Category</title>
+            <part name="overview">
+                <p>Organizational response activities are improved by incorporating lessons learned from current and previous detection/response activities.</p>
+            </part>            
             <control class="subcategory" id="RS.IM-2">
                 <title>Improvements Subcategory 2</title>
                 <part name="statement">
@@ -698,6 +758,9 @@
         <title>Recover Function</title>
         <group class="category" id="RC.RP">
             <title>Recovery Planning Category</title>
+            <part name="overview">
+                <p>Recovery processes and procedures are executed and maintained to ensure restoration of systems or assets affected by cybersecurity incidents.</p>
+            </part>            
             <control class="subcategory" id="RC.RP-1">
                 <title>Recovery Planning Subcategory 1</title>
                 <part name="statement">
@@ -707,6 +770,9 @@
         </group>
         <group class="category" id="RC.IM">
             <title>Improvements Category</title>
+            <part name="overview">
+                <p>Recovery planning and processes are improved by incorporating lessons learned into future activities.</p>
+            </part>            
             <control class="subcategory" id="RC.IM-1">
                 <title>Improvements Subcategory 1</title>
                 <part name="statement">
@@ -722,6 +788,9 @@
         </group>
         <group class="category" id="RC.CO">
             <title>Communications Category</title>
+            <part name="overview">
+                <p>Restoration activities are coordinated with internal and external parties (e.g.  coordinating centers, Internet Service Providers, owners of attacking systems, victims, other CSIRTs, and vendors).</p>
+            </part>            
             <control class="subcategory" id="RC.CO-1">
                 <title>Communications Subcategory 1</title>
                 <part name="statement">
@@ -742,4 +811,4 @@
             </control>
         </group>
     </group>
-</catalog>    
+</catalog>
