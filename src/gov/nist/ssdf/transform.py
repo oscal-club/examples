@@ -4,6 +4,7 @@ import hashlib
 from jinja2 import Environment, FileSystemLoader
 import logging
 import openpyxl
+from os.path import dirname
 from pprint import pprint
 import re
 import uuid
@@ -15,13 +16,14 @@ class Renderer:
                 and callable(subclass.render))
 
 class JinjaTemplateRender:
-    def __init__(self, searchpath="./", template='ssdf_catalog.json.j2'):
+    def __init__(self, searchpath=f"{dirname(__file__)}", template='ssdf_catalog.json.j2'):
         self.loader = FileSystemLoader(searchpath)
         self.environment = Environment(loader=self.loader, autoescape=True)
         try:
             self.template = self.environment.get_template(template)
         except Exception as err:
-            logging.warning(f"Template at '{template}' failed to load, must reinit!")
+            logging.exception(f"Template at '{template}' failed to load, must reinit!")
+            logging.exception(err)
             self.template = None
     def render(self, *args, **kwargs):
         return self.template.render(*args, **kwargs)
@@ -41,7 +43,7 @@ class SSDFOSCALTransformer:
     the SSDF document and dynamically render it into an OSCAL catalog in current
     stable release version of OSCAL.
     """
-    def __init__(self, renderer=JinjaTemplateRender, template='ssdf_catalog.json.j2'):
+    def __init__(self, renderer=JinjaTemplateRender, template='ssdf.oscal.json.j2'):
         self.template = template
         self.source = None
         self.source_hash = None
@@ -188,7 +190,10 @@ class SSDFOSCALTransformer:
                 catalog_uuid=str(uuid.uuid4()),
                 catalog_last_modified=str(datetime.datetime.now(datetime.timezone.utc)),
                 catalog_version='1.1-draft',
-                oscal_version='1.0.3'
+                oscal_version='1.0.4',
+                groups=self.groups,
+                controls=self.controls,
+                citations=self.citations
             )
             print(catalog)
 
