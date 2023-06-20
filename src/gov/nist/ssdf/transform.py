@@ -1,11 +1,11 @@
 import abc
+import argparse
 import datetime
 import hashlib
 from jinja2 import Environment, FileSystemLoader
 import logging
 import openpyxl
 from os.path import dirname
-from pprint import pprint
 import re
 import uuid
 
@@ -21,6 +21,10 @@ class JinjaTemplateRender:
         self.environment = Environment(loader=self.loader, autoescape=True)
         try:
             self.template = self.environment.get_template(template)
+            self.template.globals.update({
+                'strftime': datetime.datetime.strftime,
+                'uuid4': uuid.uuid4
+            })
         except Exception as err:
             logging.exception(f"Template at '{template}' failed to load, must reinit!")
             logging.exception(err)
@@ -38,7 +42,7 @@ class Transformer(metaclass=abc.ABCMeta):
                 and hasattr(subclass, 'save')
                 and callable(subclass.save))
 
-class SSDFOSCALTransformer:
+class SSDFExcelOSCALTransformer:
     """A class that will transform control content from the current release of
     the SSDF document and dynamically render it into an OSCAL catalog in current
     stable release version of OSCAL.
@@ -55,6 +59,14 @@ class SSDFOSCALTransformer:
         self.references = {}
         self.template = template
         self.renderer = renderer(template=self.template)
+        self.oscal_catalog = {}
+
+    @staticmethod
+    def escape_bad_chars(data):
+        """Currently oscal-cli 0.3.x do not allow square bracket characters
+        such as [ and ] without being escaped, see usnistgov/oscal-cli#80.
+        """
+        return data.replace('[', '(').replace(']', ')')
 
     def load(self, source):
         """Load the source data of the SSDF XSLX spreadsheet.
@@ -117,14 +129,17 @@ class SSDFOSCALTransformer:
                                     citation_worksheet.min_column,
                                     citation_worksheet.max_column,
                                 ):
-                    citation_id = citation[0].value
+                    # capture name in [name] to remote brackets
+                    cid_match = re.search('(\w+)', citation[0].value)
+                    citation_id = cid_match.group(0) if hasattr(cid_match, 'group') else citation[0].value
                     citation_link = citation[1].hyperlink.target \
                         if hasattr(citation[1], 'hyperlink') \
                         and hasattr(citation[1].hyperlink, 'target') \
                         else None
                     self.citations[citation_id] = {
+                        'citation_uuid': uuid.uuid4(),
                         'citation_link': citation_link,
-                        'citation_text': citation[1].value.strip(citation_link).rstrip()
+                        'citation_text': self.escape_bad_chars(citation[1].value.strip(citation_link).rstrip())
                             if citation_link
                             else citation[1]
                     }
@@ -132,7 +147,7 @@ class SSDFOSCALTransformer:
             if main_worksheet.max_column == 4 and main_worksheet.max_row >= 2:
                 ranges = [cell_range for cell_range in main_worksheet.merged_cells.ranges]
                 for r in ranges:
-                    control = main_worksheet.cell(r.min_row, r.min_col).value
+                    control = self.escape_bad_chars(main_worksheet.cell(r.min_row, r.min_col).value)
                     matches = re.search('(?P<control_title>^(\S+,?(\s+\S+,?)+))\s*\((?P<control_id>[a-zA-Z]{2}.[0-9]{1})\)(:\s+)*(?P<control_text>(.*)$)', control)
                     control_id = matches.group('control_id')
                     self.controls[control_id] = {
@@ -173,43 +188,66 @@ class SSDFOSCALTransformer:
                     self.examples[control_id] = {}
                     for example in row[example_column].value.splitlines():
                         example_id = example[0:9]
-                        example_text = example[11:]
+                        example_text = self.escape_bad_chars(example[11:])
                         self.examples[control_id][example_id] = example_text
 
                     # get references for a subcontrol (i.e. tasks)
                     self.references[control_id] = {}
                     for reference in row[reference_column].value.splitlines():
-                        reference_id, reference_text = reference.split(':')
+                        reference_id, reference_text = self.escape_bad_chars(reference).split(':')
                         self.references[control_id][reference_id] = reference_text.split(',')
 
             else:
                 logging.error(f"Transforming '{source}' detected malformed controls sheet data")
 
-            catalog = self.renderer.render(
+            self.oscal_catalog = self.renderer.render(
                 catalog_title='NIST SP 800-218 Secure Software Development Framework 1.1 DRAFT',
-                catalog_uuid=str(uuid.uuid4()),
-                catalog_last_modified=str(datetime.datetime.now(datetime.timezone.utc)),
+                catalog_last_modified=datetime.datetime.now(datetime.timezone.utc),
                 catalog_version='1.1-draft',
                 oscal_version='1.0.4',
                 groups=self.groups,
                 controls=self.controls,
+                examples=self.examples,
+                references=self.references,
                 citations=self.citations
             )
-            print(catalog)
 
         except Exception as err:
             logging.exception(f"Exception in transform:\n{err}")
             raise err
 
-    def save():
-        raise NotImplementedError
+    def save(self, output_file):
+        try:
+            output_file.write(self.oscal_catalog)
+            output_file.close()
+        except Exception as err:
+            logging.exception(f"Error writing catalog to {output_file}")
+            logging.exception(err)
 
 if __name__ == '__main__':
-    transformer = SSDFOSCALTransformer()
-    transformer.load('/home/al/Documents/NIST.SP.800-218.SSDF-table.xlsx')
+    parser = argparse.ArgumentParser(description='Convert the NIST SSDF Excel spreadsheet to an OSCAL JSON catalog')
+    parser.add_argument(
+        '-i',
+        '--input-file',
+        help='Path to NIST SSDF Excel spreadsheet file',
+        default='NIST.SP.800-218.SSDF-table.xlsx',
+        dest='input_file',
+        required=True
+    )
+    parser.add_argument(
+        '-o',
+        '--output-file',
+        help='Path intended to save OSCAL JSON catalog file. If not provided print to standard out.',
+        type=argparse.FileType('w'),
+        dest='output_file',
+        required=False
+    )
+    args = parser.parse_args()
+    transformer = SSDFExcelOSCALTransformer()
+    transformer.load(args.input_file)
     transformer.transform()
-    #pprint(transformer.controls)
-    #pprint(transformer.citations)
-    #pprint(transformer.examples)
-    #pprint(transformer.groups)
-    #pprint(transformer.references)
+
+    if args.output_file:
+        transformer.save(args.output_file)
+    else:
+        print(transformer.oscal_catalog)
