@@ -1,0 +1,117 @@
+{
+    "catalog": {
+      "uuid": "{{ uuid4() }}",
+      "metadata": {
+        "title": "{{ catalog_title }}",
+        "last-modified": "{{ strftime(catalog_last_modified, '%Y-%m-%dT%H:%M:%SZ') }}",
+        "version": "{{ catalog_version }}",
+        "oscal-version": "{{ oscal_version }}",
+        "roles": [
+          {
+            "id": "creator",
+            "title": "Document creator"
+          },
+          {
+            "id": "contact",
+            "title": "Contact"
+          }
+        ],
+        "parties": [
+          {
+            "uuid": "41a93829-b76b-43ec-b9e7-250553511549",
+            "type": "organization",
+            "name": "Joint Task Force, Interagency Working Group",
+            "email-addresses": [
+              "ssdf@nist.gov"
+            ],
+            "addresses": [
+              {
+                "addr-lines": [
+                  "National Institute of Standards and Technology",
+                  "Attn: Computer Security Division",
+                  "Information Technology Laboratory",
+                  "100 Bureau Drive (Mail Stop 8930)"
+                ],
+                "city": "Gaithersburg",
+                "state": "MD",
+                "postal-code": "20899-8930"
+              }
+            ]
+          },
+          {
+            "uuid": "a126d847-ae29-4195-ad6a-4c81a4844d92",
+            "type": "organization",
+            "name": "OSCAL Club",
+            "email-addresses": [
+              "admin@oscal.club"
+            ]
+          }
+        ],
+        "responsible-parties": [
+          {
+            "role-id": "creator",
+            "party-uuids": [
+              "41a93829-b76b-43ec-b9e7-250553511549"
+            ]
+          },
+          {
+            "role-id": "contact",
+            "party-uuids": [
+              "a126d847-ae29-4195-ad6a-4c81a4844d92"
+            ]
+          }
+        ]
+      },
+      "groups": [
+        {%- for group_id, grouped_controls in controls.values() | groupby('group_id') %}
+        {
+          "id": "{{ group_id }}",
+          "class": "family",
+          "title": "{{ groups.get(group_id).get('group_title') }}",
+          "controls": [          
+          {%- for control in grouped_controls %}
+            {
+              "id": "{{ control.get('control_id') }}",
+              "title": "Control {{ control.get('control_id') }}",
+              "class": "SP800-218",
+              "parts": [
+                {
+                  "id": "{{ control.get('control_id') }}_statement",
+                  "name": "statement",
+                  "prose": "{{ control.get('control_text') }}"
+                }{% if examples.get(control.get('control_id')) | default({}) %},
+                {
+                  "id": "{{ control.get('control_id') }}_guidance",
+                  "name": "statement",
+                  "prose": "{%- for example_id, example in examples.get(control.get('control_id')).items() %}{{ example_id }}: {{ example ~ '\\n' }}{% endfor %}"
+                }{% endif %}
+              ]{% if references.get(control.get('control_id')) | default({}) %},
+              "links": [{%- for reference_key, reference in references.get(control.get('control_id')).items() %}
+                {
+                  "href": "#{{ citations.get(reference_key).get('citation_uuid') }}",
+                  "text": "See {{ reference | join(',') | trim }}.",
+                  "rel": "reference"                  
+                }{% if (loop.index < loop.length) and (loop.length != 1) %},{% endif %}{% endfor %}
+              ]{% endif %}
+            }{% if (loop.index < loop.length) and (loop.length != 1) %},{% endif %}{% endfor %}
+          ]
+        }{% if (loop.index < loop.length) and (loop.length != 1) %},{% endif %}{% endfor %}
+      ],
+      "back-matter": {
+        "resources": [
+          {%- for title, citation in  citations.items() %}
+          {
+            "uuid": "{{ citation.get('citation_uuid') }}",
+            "title": "{{ title }}",
+            "description": "{{ citation.get('citation_text') }}",
+            "rlinks": [
+              {
+                "href": "{{ citation.get('citation_link') }}"
+              }
+            ]
+          }{% if (loop.index < loop.length) and (loop.length != 1) %},{% endif %}{% endfor %}
+        ]
+      }
+    }
+}
+  
