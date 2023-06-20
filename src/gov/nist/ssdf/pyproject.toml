@@ -2,7 +2,7 @@
 name = "ssdf"
 version = "0.0.1"
 description = "Utilities to convert SSDF catalog into OSCAL."
-authors = ["Al S <xee5ch.gh.al@il5.in>"]
+authors = ["Al S <xee5ch@member.fsf.org>"]
 license = "GPL-3.0"
 
 [tool.poetry.dependencies]
