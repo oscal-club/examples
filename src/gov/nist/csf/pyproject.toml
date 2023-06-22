@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "csf"
+version = "0.1.0"
+description = "A tool to convert the official CSF 1.1 CPRT format to OSCAL JSON catalogs."
+authors = ["Al S <xee5ch@member.fsf.org>"]
+license = "GPL-3.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
